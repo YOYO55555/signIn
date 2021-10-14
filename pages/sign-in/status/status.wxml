@@ -1,0 +1,11 @@
+<!--pages/sign-in/status/status.wxml-->
+<view id="allCard">
+    <block wx:for="{{number}}" wx:key="item">
+      <view id="card">
+        <i-card title="{{item.name}}" extra="{{item.status}}" full="true">
+            <view slot="content">总时间：</view>
+            <view slot="footer">{{item.totalTime}}</view>
+        </i-card>
+      </view>
+    </block>
+</view>

@@ -1,0 +1,57 @@
+<view id="main">
+  <view id="container">
+    <view id="head">
+      <view id="head_img">
+        <image src="./img/1.jpg" mode="aspectFill"></image>
+      </view>
+    </view>
+</view>
+
+<view id ="content">
+   <view id="card">
+      <i-card title="{{sid}}" extra="{{sname}}">
+        <view slot="content">签到规则：</view>
+        <view slot="footer">点击签到即可！</view>
+      </i-card>
+   </view>
+    <view id="btn_">
+      <view id="signIn"><button id="sin" bindtap="sign_In">签到</button></view>
+      <view id="signUp"><button id="sup" bindtap="sign_out">签退</button></view>
+    </view>
+</view>
+
+  <view id="footer">
+    <navigator class="footer_content" url="./record/record" hover-class="none">
+      <image src="./img/signIn.png" mode="aspectFill" style="width: 50px; height: 50px;"></image>
+      签到记录
+    </navigator>
+    <navigator class="footer_content" url="./status/status" hover-class="none">
+      <image src="./img/status.png" mode="aspectFill" style="width: 50px; height: 50px;"></image>
+      成员状态
+    </navigator>
+  </view>
+</view>
+
+<view id="mask" style="display: {{display}}">
+  <view id="login">
+
+    <view id="login_head">
+      登陆
+    </view>
+
+    <view id="login_content">
+      <i-input value="{{studentId}}" title="学号" autofocus placeholder="请输入学号" bind:change="studentIdChange" />
+      <i-input value="{{studentName}}" title="姓名" placeholder="请输入姓名" bind:change="studentNameChange" />
+    </view>
+
+    <view id="login_footer">
+      <i-button bind:click="handleClick" type="info" class="login_btn" bindtap="cancle">取消</i-button>
+      <i-button bind:click="handleClick" type="success" class="login_btn" bindtap="Login">登陆</i-button>
+    </view>
+
+  </view>
+</view>
+<!-- <i-button type="ghost" bind:click="handleSuccess">成功提醒</i-button> -->
+
+<!-- 用于签到成功提示消息 -->
+<i-message id="message" />

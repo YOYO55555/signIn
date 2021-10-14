@@ -1,0 +1,21 @@
+<!--pages/sign-in/record/record.wxml-->
+<view>
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="yesterday" title="昨天"></i-tab>
+    <i-tab key="today" title="今天"></i-tab>
+    <i-tab key="all" title="全部"></i-tab>
+  </i-tabs>
+</view>
+
+<view>
+  <block>
+      <view id="record" wx:for="{{recordList}}" wx:key="item">
+        <i-card title="{{item.sid}}" extra="{{item.sname}}" full="true">
+          <view slot="content">签到时间：{{item.loginTime}}</view>
+          <view slot="footer">签退时间：{{item.logoutTime}}</view>
+        </i-card>
+      </view>
+    </block>
+</view>
+
+<i-toast id="toast" />

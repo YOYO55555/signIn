@@ -1,0 +1,5 @@
+/* pages/sign-in/record/record.wxss */
+#record{
+    margin-top: 5%;
+    position: relative;
+}

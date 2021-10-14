@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/sign-in/sign-in",
+    "pages/sign-in/record/record",
+    "pages/sign-in/status/status"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "i-button": "./pages/sign-in/dist/button/index",
+    "i-card": "./pages/sign-in/dist/card/index",
+    "i-drawer": "./pages/sign-in/dist/drawer/index",
+    "i-icon": "./pages/sign-in/dist/icon/index",
+    "i-message":"./pages/sign-in/dist/message/index",
+    "i-input":"./pages/sign-in/dist/input/index",
+    "i-toast":"./pages/sign-in/dist/toast/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}
